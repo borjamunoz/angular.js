@@ -1,4 +1,5 @@
 var app = angular.module('myApp', []);
+
   app.controller('AlumnosController', function($scope) {
       $scope.alumnos=[
         {nombre:"Borja", apellidos:"Muñoz", telefono:"660924913"},
@@ -13,7 +14,20 @@ var app = angular.module('myApp', []);
             apellidos:$scope.nuevoAlumno.apellidos, 
             telefono:$scope.nuevoAlumno.telefono
         });
-        
+            
+            $scope.formVisibility = false;
+
+    }
+    
+    $scope.formVisibility = false;
+    
+    $scope.ShowForm=function(){
+      
+      $scope.formVisibility = true;
+      
+      console.log($scope.formVisibility)
+    
+      
     }
     
 });
